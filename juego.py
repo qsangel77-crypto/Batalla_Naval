@@ -17,3 +17,20 @@ def dibujar_mapa(mapa):
 
             print(f"{simbolo} ", end="")
         print()
+
+# Crear matriz 5x5 llena de agua
+oceano = [
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0]
+]
+
+# Posicionar barcos
+oceano[1][2] = 1
+oceano[3][4] = 1
+oceano[4][0] = 1
+
+print("¡Océano generado y flota desplegada!")
+dibujar_mapa(oceano)
