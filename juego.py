@@ -34,3 +34,18 @@ oceano[4][0] = 1
 
 print("¡Océano generado y flota desplegada!")
 dibujar_mapa(oceano)
+
+# Sistema de ataque
+fila = int(input("\nIngresa la fila para atacar (0-4): "))
+columna = int(input("Ingresa la columna para atacar (0-4): "))
+
+# Verificar ataque
+if oceano[fila][columna] == 1:
+    print("¡IMPACTO CRÍTICO! Hundiste un barco.")
+    oceano[fila][columna] = 8
+else:
+    print("Fallaste. Solo le diste al agua.")
+    oceano[fila][columna] = 9
+
+# Mostrar mapa actualizado
+dibujar_mapa(oceano)
